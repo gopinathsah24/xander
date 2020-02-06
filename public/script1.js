@@ -1,4 +1,4 @@
-// var socket = io.connect('http://192.168.141.90:3000/chat');
+var socket = io.connect('http://192.168.141.90:3000/chat');
 
 var q;
 
