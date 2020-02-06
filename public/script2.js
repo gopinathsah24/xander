@@ -3,7 +3,7 @@ var typer = document.querySelector('#typer');
 var input = document.querySelector('input');
 var button = document.querySelector('button');
 
-var socket = io.connect('http://192.168.141.90:3000/chatter');
+// var socket = io.connect('http://192.168.141.90:3000/chatter');
 
 button.addEventListener('click',function(e){
   socket.emit('message',{info:input.value});
