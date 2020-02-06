@@ -17,7 +17,7 @@ var express        = require("express"),
 
 
 console.log(process.env.DATABASEURL);
-var url = process.env.DATABASEURL ||"mongodb://localhost/startup" ;
+var url = process.env.DATABASEURL||"mongodb://localhost/startup" ;
 mongoose.connect(url);
 
 
@@ -55,7 +55,7 @@ app.use("/", loginAndSignupRoutes);
 app.use("/movies", movieRoutes);
 app.use("/comment", commentRoutes);
 
-// 
+
 // var socket = require('socket.io');
 // var chatHistory = require('./models/chatHistory');
 //
@@ -68,10 +68,10 @@ var server = app.listen(process.env.PORT,function(){
 	console.log('we are live at 3000');
 	console.log("The Cineries Server Has Started!");
 });
-//
-// app.get('/chat',function(req,res){
-// 	res.sendFile(__dirname+'/index.html');
-// });
+
+app.get('/chat',function(req,res){
+	res.sendFile(__dirname+'/index.html');
+});
 // app.get('/chatter',function(req,res){
 // 	if(arr.indexOf(req.query.name) === -1)
 // 	{
