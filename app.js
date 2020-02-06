@@ -17,7 +17,7 @@ var express        = require("express"),
 
 
 console.log(process.env.DATABASEURL);
-var url = "mongodb://localhost/startup" ;
+var url = process.env.DATABASEURL ||"mongodb://localhost/startup" ;
 mongoose.connect(url);
 
 
@@ -64,7 +64,7 @@ var arr = ['shreshth',''];
 var ips = [1,2];
 var rooms =[0,0];
 
-var server = app.listen(3000,function(){
+var server = app.listen(process.env.PORT,function(){
 	console.log('we are live at 3000');
 	console.log("The Cineries Server Has Started!");
 });
