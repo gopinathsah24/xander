@@ -1,0 +1,28 @@
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Chatter</title>
+	<link rel="stylesheet" href="style1.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.0/socket.io.js"> </script>
+</head>
+<body>
+	<div id="container">
+		<header><h1>Room : <%= room %></h1></header>
+		<div id="messages">
+			<span class="handler">Shreshth : </span>
+			<span class="text">please be polite my friends</span>
+			<br>
+			<% data.forEach(function(chat){ %>
+				<span class="handler"> <%= chat.handler %> : </span>
+				<span class="text"> <%= chat.text %> </span>
+				<br>
+			<% }); %>
+		</div>
+		<div id="typer">
+		</div>
+		<input type="text" name="mes" placeholder="write something!!!" required>
+		<button>Send</button>
+	</div>
+	<script src="script2.js"></script>
+</body>
+</html>

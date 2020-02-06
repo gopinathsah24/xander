@@ -1,0 +1,23 @@
+<% include ../partials/header %>
+<header class="jumbotron">
+    <div class="container">
+        <h1><span class="glyphicon glyphicon-tent"></span> Expert!</h1>
+        <p>Some Of The Greatest Experts Of All Time</p>
+        <p><a class="btn btn-primary btn-lg" href="/comment/new">Add New Expert</a></p>
+    </div>
+</header>
+
+
+<div class="row text-center" style="display:flex; flex-wrap: wrap;">
+    <% movie.forEach(function(Movie){ %>
+    <div class="col-md-3 col-sm-6">
+        <div class="thumbnail">
+            <div class="caption">
+                <h4><%= Movie.text %></h4>
+            </div>
+            <p><a href="/comment/<%= Movie._id %>/" class="btn btn-primary">More Info</a></p>
+        </div>
+    </div>
+    <% }); %>
+</div>
+<% include ../partials/footer %>

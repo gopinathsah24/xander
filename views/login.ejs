@@ -1,0 +1,26 @@
+<% include ./partials/header %>
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>startupform</title>
+    <link rel="stylesheet" href="startupcss.css">
+  </head>
+  <body>
+    <div class="border">
+      <form action="/login" method="post">
+        <div class="User name">
+          <h3>User-name</h3>
+          <input type="text" name="username" placeholder="User name" required></input>
+        </div>
+
+        <div class="Password">
+        <h3>Password</h3>
+        <input type="password" name="password" placeholder="Password" required></input>
+        </div>
+        <button class="button">Login</button>
+      </form>
+    </div>
+  </body>
+</html>
+<% include ./partials/footer %>

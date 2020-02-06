@@ -1,0 +1,28 @@
+*
+{
+    margin: 0;
+    padding: 0;
+}
+.container
+{
+    width: 70%;
+    margin:0 auto;
+}
+.container ul
+{
+    list-style: none;
+    text-align: center;
+}
+.container li
+{
+    border: 1px solid red;
+    float: left;
+    width: 20%;
+    text-align: center;
+    padding: 40px;
+}
+
+.liclass
+{
+    text-align: center;
+}

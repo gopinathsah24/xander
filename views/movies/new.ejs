@@ -1,0 +1,54 @@
+<% include ../partials/header %>
+<link rel="stylesheet" href="../startupcss.css">
+  <div class="border">
+    <form class="form2" action="/movies" method="POST">
+        <div class="Startup-Name">
+          <h3>Startup-name</h3>
+          <input type="text" name="name" placeholder="Startup-name" required></input>
+        </div>
+        <div class="Startup-Id">
+          <h3>Startup-Id</h3>
+          <input type="text" name="auth_id" placeholder="Startup-Id(governmental id)" required></input>
+        </div>
+        <div class="Startup-Id">
+          <h3>Startup-Image</h3>
+          <input type="text" name="image" placeholder="image url">
+        </div>
+        <div class="Description">
+          <h3>Description</h3>
+          <textarea name="description" rows="8" cols="80" placeholder="Description"></textarea>
+        </div>
+        <div class="Address">
+          <h3>Address</h3>
+          <input type="text" name="address" placeholder="Address" required></input>
+        </div>
+
+        <button class="button2">Submit!</button>
+    </form>
+  </div>
+
+<% include ../partials/footer %>
+
+
+
+
+    <!-- <div class="row">
+        <h1 style="text-align: center">Create a New Movie</h1>
+        <div style="width: 30%; margin: 25px auto;">
+            <form action="/movies" method="POST">
+                <div class="form-group">
+                    <input class="form-control" type="text" name="name" placeholder="name">
+                </div>
+                <div class="form-group">
+                    <input class="form-control" type="text" name="image" placeholder="image url">
+                </div>
+                <div class="form-group">
+                    <input class="form-control" type="text" name="description" placeholder="description">
+                </div>
+                <div class="form-group">
+                    <button class="btn btn-lg btn-primary btn-block">Submit!</button>
+                </div>
+            </form>
+            <a href="/movies">Go Back</a>
+        </div>
+    </div> -->

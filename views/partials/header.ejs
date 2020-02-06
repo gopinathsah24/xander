@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Cineries</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+        <link rel="stylesheet" href="stylesheets/main.css">
+        <link rel="stylesheet" href="style.css">
+        <script src="https://code.jquery.com/jquery-git2.min.js"></script>
+    </head>
+    <body>
+      <div class="menu-box">
+          <ul>
+              <li><a href="/">Home</a></li>
+
+              <li><a href="#">Events</a>
+                  <div class="sub-menu-1">
+                      <ul>
+                          <li><a href="#">Webinars</a></li>
+                          <li><a href="#">Seminars</a></li>
+                          <li><a href="#">Team</a></li>
+                      </ul>
+                  </div>
+              </li>
+              <li><a href="#">Services</a>
+                <div class="sub-menu-1">
+                    <ul>
+                        <li><a href="http://myfirst-django-app.herokuapp.com/">Blog</a></li>
+                    </ul>
+                </div>
+              </li>
+              <li><a href="#">Clients</a></li>
+              <li><a href="#">Investors</a>
+                <div class="sub-menu-1">
+                    <ul>
+                        <li><a href="/comment">View All Experts</a></li>
+                    </ul>
+                </div>
+              </li>
+              <li><a href="#">StartUp</a>
+                <div class="sub-menu-1">
+                    <ul>
+                        <li><a href="/movies">View all Startups</a></li>
+                    </ul>
+                </div>
+              </li>
+              <% if(!currentUser){ %>
+                <li><a href="/login">Login</a></li>
+                <li><a href="/signup">Sign Up</a></li>
+              <% } else { %>
+                <li><a href="#">Signed In As <%= currentUser.username %></a></li>
+                <li><a href="/logout">Logout</a></li>
+              <% } %>
+          </ul>
+      </div>
+
+        <!-- <nav class="navbar navbar-default">
+            <div class="container">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="/">Cineries</a>
+                </div>
+                <div class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        <% if(!currentUser){ %>
+                        <li><a href="/login">Login</a></li>
+                        <li><a href="/signup">Sign Up</a></li>
+                        <% } else { %>
+                        <li><a href="#">Signed In As <%= currentUser.username %></a></li>
+                        <li><a href="/logout">Logout</a></li>
+                        <% } %>
+                    </ul>
+                </div>
+            </div>
+        </nav> -->
+        <div class="container">
+            <% if(error && error.length > 0) { %>
+            <div class="alert alert-danger"><p><%=error %></p></div>
+            <% } %>
+
+            <% if(success && success.length > 0) { %>
+            <div class="alert alert-success"><p><%= success %></p></div>
+            <% } %>
+        </div>
+
+        <div class="container">
